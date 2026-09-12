@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Audio Tab Closer</title>
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1398ff"/>
+      <stop offset="1" stop-color="#006bea"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#blue)" d="M12 8h45c7 0 10 3 14 9l4 6h41c7 0 12 5 12 12v81c0 7-5 12-12 12H12c-7 0-12-5-12-12V20C0 13 5 8 12 8Z"/>
+  <path fill="#fff" d="M22 62c0-5 4-9 9-9h12l20-17c5-4 11-1 11 5v54c0 6-6 9-11 5L43 83H31c-5 0-9-4-9-9V62Z"/>
+  <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="8" d="M84 57c5 5 5 17 0 22M96 48c13 13 13 31 0 44"/>
+  <circle cx="104" cy="23" r="23" fill="#ff1f2d"/>
+  <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="8" d="m95 14 18 18m0-18L95 32"/>
+</svg>

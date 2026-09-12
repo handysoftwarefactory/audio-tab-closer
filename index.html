@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Privacy Policy for the Audio Tab Closer Chrome extension.">
+    <title>Privacy Policy — Audio Tab Closer</title>
+    <link rel="icon" type="image/png" href="identity-master.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Audio Tab Closer privacy policy">
+        <img src="identity-master.png" width="36" height="36" alt="">
+        <span>Audio Tab Closer</span>
+      </a>
+      <span class="document-label">Privacy Policy</span>
+    </header>
+
+    <main id="top">
+      <section class="intro" aria-labelledby="page-title">
+        <h1 id="page-title">Privacy Policy</h1>
+        <p class="lede">
+          Audio Tab Closer helps you identify, open, and close Chrome tabs that are producing audio. This policy explains the limited browser information it uses to provide that feature and how that information is protected.
+        </p>
+        <div class="policy-meta">
+          <span>Effective September 12, 2026</span>
+          <span>Version 1.0</span>
+        </div>
+      </section>
+
+      <div class="content-layout">
+        <article class="policy">
+          <section id="information">
+            <div>
+              <span class="section-number">01</span>
+              <h2>Information the extension handles</h2>
+            </div>
+            <div>
+              <p>
+                When you open the extension, Audio Tab Closer uses Chrome’s Tabs API to identify tabs that Chrome marks as audible. For those tabs, it processes the tab title, URL or hostname, tab ID, window ID, and audible status so you can recognize and manage the source of sound.
+              </p>
+              <p>
+                This information may qualify as web browsing activity under Chrome Web Store policies even though it is processed only on your device. The extension does not read or modify webpage content.
+              </p>
+            </div>
+          </section>
+
+          <section id="use">
+            <div>
+              <span class="section-number">02</span>
+              <h2>How the information is used</h2>
+            </div>
+            <div>
+              <p>The information is used only to provide the extension’s user-facing features:</p>
+              <ul>
+                <li>show tabs that are currently producing audio;</li>
+                <li>let you switch to or close a tab you select;</li>
+                <li>keep the displayed list accurate when a tab closes; and</li>
+                <li>return you to the originating tab after closing a destination selected from the popup.</li>
+              </ul>
+              <p>It is not used for analytics, profiling, advertising, marketing, or any unrelated purpose.</p>
+            </div>
+          </section>
+
+          <section id="storage">
+            <div>
+              <span class="section-number">03</span>
+              <h2>Storage and retention</h2>
+            </div>
+            <div>
+              <p>
+                Audio Tab Closer uses <code>chrome.storage.session</code> to temporarily store numeric tab IDs and a boolean resume flag. This supports the return-and-reopen flow after you close an audio tab.
+              </p>
+              <p>
+                Session data remains in browser memory only and is cleared when Chrome or the extension restarts. Tab titles, URLs, and hostnames are not stored by the extension.
+              </p>
+            </div>
+          </section>
+
+          <section id="sharing">
+            <div>
+              <span class="section-number">04</span>
+              <h2>Sharing and transfer</h2>
+            </div>
+            <div>
+              <p>
+                The extension does not transmit user data to the developer, external servers, service providers, advertisers, or other third parties. It does not sell user data. It contains no analytics, tracking, or remote code.
+              </p>
+            </div>
+          </section>
+
+          <section id="limited-use">
+            <div>
+              <span class="section-number">05</span>
+              <h2>Chrome Web Store Limited Use</h2>
+            </div>
+            <div>
+              <p>
+                Audio Tab Closer’s use of information received from Chrome APIs complies with the Chrome Web Store User Data Policy, including the Limited Use requirements. Information is used only to provide the extension’s single purpose, is not transferred for unrelated purposes, is not used for personalized advertising, and is not made available for human review.
+              </p>
+            </div>
+          </section>
+
+          <section id="security">
+            <div>
+              <span class="section-number">06</span>
+              <h2>Security</h2>
+            </div>
+            <div>
+              <p>
+                The extension reduces privacy risk by keeping processing local, requesting only the <code>tabs</code> and <code>storage</code> permissions, and making no external network requests. No method of software operation is risk-free, but Audio Tab Closer is designed to avoid transmitting or persistently storing browsing information.
+              </p>
+            </div>
+          </section>
+
+          <section id="changes">
+            <div>
+              <span class="section-number">07</span>
+              <h2>Changes to this policy</h2>
+            </div>
+            <div>
+              <p>
+                This policy may be updated if the extension’s functionality or data practices change. The effective date at the top of this page will be revised when an update is published. Material changes will be reflected in the Chrome Web Store listing as required.
+              </p>
+            </div>
+          </section>
+
+          <section id="acknowledgement">
+            <div>
+              <span class="section-number">08</span>
+              <h2>Acknowledgement</h2>
+            </div>
+            <div>
+              <p>
+                By installing or using Audio Tab Closer, you acknowledge that you have read this Privacy Policy.
+              </p>
+            </div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <section class="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Questions about your privacy?</h2>
+        <a class="email" href="mailto:handysoftware.factory@gmail.com">handysoftware.factory@gmail.com</a>
+      </section>
+      <div class="footer-meta">
+        <p class="meta-row">
+          Audio Tab Closer · Published by
+          <a href="https://github.com/handysoftwarefactory">Handy Software Factory</a>
+          <span class="dot-separator" aria-hidden="true">•</span>
+          <a href="https://github.com/handysoftwarefactory/audio-tab-closer">GitHub repository</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
