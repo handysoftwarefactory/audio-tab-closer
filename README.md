@@ -31,7 +31,7 @@ Permissions:
 - `tabs` — identifies and manages audible tabs selected by the user.
 - `storage` — temporarily retains tab IDs required for the return flow.
 
-[Privacy Policy](#) — link will be added after GitHub Pages is configured.
+[Privacy Policy](https://handysoftwarefactory.github.io/audio-tab-closer/)
 
 ## License
 
