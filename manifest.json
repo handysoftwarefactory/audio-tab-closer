@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Audio Tab Closer",
+  "description": "Quickly locate, navigate to, or close noisy background audio tabs with a single click.",
+  "version": "0.0.0.1",
+  "minimum_chrome_version": "127",
+  "permissions": ["storage", "tabs"],
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "32": "assets/icons/icon-32.png",
+    "48": "assets/icons/icon-48.png",
+    "96": "assets/icons/icon-96.png",
+    "128": "assets/icons/icon-128.png"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_title": "Audio Tab Closer",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon-16.png",
+      "32": "assets/icons/icon-32.png"
+    }
+  }
+}

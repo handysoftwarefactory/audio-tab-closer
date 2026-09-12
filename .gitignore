@@ -1,0 +1,15 @@
+.DS_Store
+*.zip
+
+# Local privacy-policy preview; publish a finalized copy separately.
+privacy-policy-site/
+tests/
+
+# Design experiments and source artwork are not extension runtime files.
+assets/icon-candidates/
+assets/icon-previews/
+assets/icons/identity-master.png
+assets/icons/identity-32.png
+assets/icons/identity-64.png
+assets/icons/toolbar-master.svg
+docs/superpowers/

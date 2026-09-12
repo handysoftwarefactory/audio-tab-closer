@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Audio Tab Closer</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="popup.js" defer></script>
+  </head>
+  <body>
+    <main id="audio-tab-closer" class="app" aria-label="Audio Tab Closer">
+      <header class="app-header">
+        <img
+          class="app-icon"
+          src="../../assets/icons/identity-40.png"
+          srcset="../../assets/icons/identity-40.png 1x, ../../assets/icons/identity-80.png 2x"
+          width="40"
+          height="40"
+          alt=""
+          aria-hidden="true"
+        >
+        <h1 class="app-title">Audio Tab Closer</h1>
+      </header>
+
+      <div class="status" role="status" tabindex="-1" data-state="loading">
+        <span class="status-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M11 17h2v-6h-2v6Zm1-14a9 9 0 1 0 9 9 9.01 9.01 0 0 0-9-9Zm0 16.2a7.2 7.2 0 1 1 7.2-7.2 7.21 7.21 0 0 1-7.2 7.2ZM11 9h2V7h-2v2Z"></path>
+          </svg>
+        </span>
+        <p class="status-text">Looking for audio...</p>
+      </div>
+
+      <section class="tab-results" aria-label="Tabs producing sound" hidden>
+        <ul class="tab-list"></ul>
+      </section>
+    </main>
+  </body>
+</html>
