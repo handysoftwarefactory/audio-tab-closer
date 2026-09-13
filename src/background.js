@@ -84,7 +84,21 @@ async function findAndActivateAudibleTab(sourceTabId) {
     };
   }
 
-  await activateTab(targetTab);
+  const shouldRememberSource =
+    sourceTab?.id !== targetTab.id && Number.isInteger(sourceTab?.id);
+
+  if (shouldRememberSource) {
+    await rememberSourceTab(targetTab.id, sourceTab.id);
+  }
+
+  try {
+    await activateTab(targetTab);
+  } catch (error) {
+    if (shouldRememberSource) {
+      await chrome.storage.session.remove(getReturnRouteKey(targetTab.id));
+    }
+    throw error;
+  }
 
   return {
     ok: true,
