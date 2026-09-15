@@ -66,10 +66,13 @@
       }
 
       if (response.result === "multiple") {
-        renderTabResults(response.tabs ?? []);
+        const tabs = response.tabs ?? [];
+        renderTabResults(tabs);
         updateStatus(
           "success",
-          `${response.tabs?.length ?? 0} tabs are producing sound.`
+          tabs.length === 1
+            ? "1 tab is producing sound."
+            : `${tabs.length} tabs are producing sound.`
         );
         return;
       }

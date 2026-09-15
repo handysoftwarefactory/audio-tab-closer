@@ -50,7 +50,7 @@ function getMessageOperation(message) {
 
 async function findAndActivateAudibleTab(sourceTabId) {
   const sourceTab = await getTabIfAvailable(sourceTabId);
-  const shouldResumeList = await consumePopupResume(sourceTab?.id);
+  await consumePopupResume(sourceTab?.id);
   const audibleTabs = await chrome.tabs.query({ audible: true });
 
   if (!audibleTabs.length) {
@@ -61,49 +61,12 @@ async function findAndActivateAudibleTab(sourceTabId) {
     };
   }
 
-  const sourceWindowId = sourceTab?.windowId;
-
-  if (audibleTabs.length > 1 || shouldResumeList) {
-    return {
-      ok: true,
-      result: "multiple",
-      tabs: audibleTabs
-        .filter((tab) => Number.isInteger(tab.id))
-        .map((tab) => serializeTab(tab, sourceTab?.id))
-    };
-  }
-
-  const targetTab =
-    audibleTabs.find((tab) => tab.windowId === sourceWindowId) ?? audibleTabs[0];
-
-  if (!targetTab.id) {
-    return {
-      ok: false,
-      reason: "invalid_tab",
-      message: "Chrome found a sound tab, but it could not be opened."
-    };
-  }
-
-  const shouldRememberSource =
-    sourceTab?.id !== targetTab.id && Number.isInteger(sourceTab?.id);
-
-  if (shouldRememberSource) {
-    await rememberSourceTab(targetTab.id, sourceTab.id);
-  }
-
-  try {
-    await activateTab(targetTab);
-  } catch (error) {
-    if (shouldRememberSource) {
-      await chrome.storage.session.remove(getReturnRouteKey(targetTab.id));
-    }
-    throw error;
-  }
-
   return {
     ok: true,
-    result: "single",
-    tab: serializeTab(targetTab, sourceTab?.id)
+    result: "multiple",
+    tabs: audibleTabs
+      .filter((tab) => Number.isInteger(tab.id))
+      .map((tab) => serializeTab(tab, sourceTab?.id))
   };
 }
 
